@@ -17,6 +17,8 @@ public class User  implements Serializable {
     private String firstName;
     private String lastName;
     private String password;
+    // private String password = "StaticValue"
+
 
     public User(
             @JsonProperty("username") String username,
