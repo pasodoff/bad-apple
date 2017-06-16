@@ -13,20 +13,18 @@ Credentials
    - ~~Hardcoded admin username and password~~
    - ~~Commented out passwords~~
  - Enable SSL
-   - Hard coded password for keystore
-   - `JKS` file with private, public keys
+   - ~~Hard coded password for keystore~~
+   - ~~Keystore `p12` file with private, public keys~~
  - Mybatis mappers
    - ~~user mapper~~
    - lack of sql injection protection
  - Plain text password within a config/properties file
-     - Used to connect to in memory database
-     - Used to connect to REST endpoint
-     - Unused
-     - Commented out
-     - base64 encoded
+     - ~~Used to connect to in memory database~~
+     - ~~Used to connect to REST endpoint~~
+     - ~~base64 encoded~~
  - Jersy Rest client
-   - Hardcoded credentials
-   - Credentials from configuration
+   - ~~Hardcoded credentials~~
+   - ~~Credentials from configuration~~
  - SQL
    - ~~H2 database create a new user assign password in ddl~~
    - ~~Create table and insert username password~~
