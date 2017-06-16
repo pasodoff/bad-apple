@@ -2,6 +2,7 @@ package com.pasodoff.hcp.badapple.model;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.pasodoff.hcp.badapple.util.Encryption;
 
 import javax.jws.soap.SOAPBinding;
 import java.io.Serializable;
@@ -25,7 +26,7 @@ public class User  implements Serializable {
         this.username = username;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.password = password;
+        setPassword(password);
     }
 
     public User(Integer id, String username, String firstName, String lastName, String password) {
@@ -33,12 +34,15 @@ public class User  implements Serializable {
         this.username = username;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.password = password;
+        setPassword(password);
     }
 
     public User(String username) {
         this.username = username;
-        this.password = "DefaultPassword";
+        // TODO: Hard coded default password
+        setPassword("DefaultPassword");
+        // TODO: Password left in comment
+        // this.password = "OldDefaultPassword";
     }
 
     public String getFirstName() {
@@ -70,7 +74,11 @@ public class User  implements Serializable {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        if(password.startsWith("ENC:")){
+            this.password = password;
+        } else {
+            this.password = "ENC:" + Encryption.encrypt(password);
+        }
     }
 
     public String getUsername() {

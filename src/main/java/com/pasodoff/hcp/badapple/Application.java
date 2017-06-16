@@ -2,6 +2,7 @@ package com.pasodoff.hcp.badapple;
 
 import com.pasodoff.hcp.badapple.dao.UserDao;
 import com.pasodoff.hcp.badapple.model.User;
+import com.pasodoff.hcp.badapple.util.Encryption;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -46,10 +47,13 @@ class WebSecurityConfiguration extends GlobalAuthenticationConfigurerAdapter {
 
             @Override
             public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-                // TODO: Hard coded admin username and password
+
                 if(username.equals("admin")){
                     return new org.springframework.security.core.userdetails.User(
                             "admin",
+                            // TODO: HCP Comment within security framework constructor arguements
+                            // "OldAdminPassword"
+                            // TODO: Hard coded admin username and password
                             "asdfghjkl1",
                             true,
                             true,
@@ -63,7 +67,7 @@ class WebSecurityConfiguration extends GlobalAuthenticationConfigurerAdapter {
                 if (user != null) {
                     return new org.springframework.security.core.userdetails.User(
                             user.getUsername(),
-                            user.getPassword(),
+                            Encryption.decrypt(user.getPassword()),
                             true,
                             true,
                             true,
