@@ -3,8 +3,27 @@
 Example Java REST application to test hard coded passwords and code vulnerability scanning
 
 ## Vulnerabilities
- 
-Credentials
+
+| Location                                                       | Line number |Description                                                   | 
+|----------------------------------------------------------------|-------------|---------------------------------------------------------------| 
+| ./src/main/java/com/pasodoff/hcp/badapple/Application.java     | 54          | HCP Comment within security framework constructor arguements | 
+| ./src/main/java/com/pasodoff/hcp/badapple/Application.java     | 56          | Hard coded admin username and password                       | 
+| ./src/main/java/com/pasodoff/hcp/badapple/model/User.java      | 44          | Hard coded default password                                  | 
+| ./src/main/java/com/pasodoff/hcp/badapple/model/User.java      | 46          | Password left in comment                                     | 
+| ./src/main/java/com/pasodoff/hcp/badapple/util/Encryption.java | 15          | Hard coded encryption key                                    | 
+| ./src/main/java/com/pasodoff/hcp/badapple/util/Encryption.java | 17          | Hard coded initialization vector                             | 
+| ./src/main/resources/application-local.properties              | 13          |SSL Keystore exposed credentials                             | 
+| ./src/main/resources/application-prod.properties               | 5           |Plaintext Password in configuration                          | 
+| ./src/main/resources/application-prod.properties               | 15          |Base64 encoded password                                      | 
+| ./src/main/resources/application-prod.properties               | 18          |SSL Keystore exposed credentials                             | 
+| ./src/main/resources/application-uat.properties                | 5           |Plaintext Password in configuration                          | 
+| ./src/main/resources/application-uat.properties                | 14          |Base64 encoded password                                      | 
+| ./src/main/resources/application-uat.properties                | 18          |SSL Keystore exposed credentials                             | 
+| ./src/main/resources/application.properties                    | 4           |Plaintext Password in configuration                          | 
+| ./src/main/resources/application.properties                    | 14          |Base64 encoded password                                      | 
+| ./src/main/resources/application.properties                    | 17          |SSL Keystore exposed credentials                             | 
+
+
 
 ### TODO
 
