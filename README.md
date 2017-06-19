@@ -22,7 +22,7 @@ Credentials
      - ~~Used to connect to in memory database~~
      - ~~Used to connect to REST endpoint~~
      - ~~base64 encoded~~
- - Jersy Rest client
+ - Jersey Rest client
    - ~~Hardcoded credentials~~
    - ~~Credentials from configuration~~
  - SQL
@@ -32,6 +32,6 @@ Credentials
  - Encryption class
    - ~~Hard coded IV and Keys~~
 - Script
-   - call mysql database connection and pass a static plaintext password
-   - call mysql database connection with variable (assignment above with plaintext password)
+   - call mysql database connection and pass a static plain-text password
+   - call mysql database connection with variable (assignment above with plain-text password)
  
