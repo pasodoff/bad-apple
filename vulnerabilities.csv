@@ -1,17 +1,27 @@
-"Location","Line number","TODO","Description"
-"./src/main/java/com/pasodoff/hcp/badapple/Application.java","54","                            // TODO"," HCP Comment within security framework constructor arguements"
-"./src/main/java/com/pasodoff/hcp/badapple/Application.java","56","                            // TODO"," Hard coded admin username and password"
-"./src/main/java/com/pasodoff/hcp/badapple/model/User.java","44","        // TODO"," Hard coded default password"
-"./src/main/java/com/pasodoff/hcp/badapple/model/User.java","46","        // TODO"," Password left in comment"
-"./src/main/java/com/pasodoff/hcp/badapple/util/Encryption.java","15","    // TODO"," Hard coded encryption key"
-"./src/main/java/com/pasodoff/hcp/badapple/util/Encryption.java","17","    // TODO"," Hard coded initialization vector"
-"./src/main/resources/application-local.properties","13","# TODO"," SSL Keystore exposed credentials"
-"./src/main/resources/application-prod.properties","5","# TODO"," Plaintext Password in configuration"
-"./src/main/resources/application-prod.properties","15","# TODO"," Base64 encoded password"
-"./src/main/resources/application-prod.properties","18","# TODO"," SSL Keystore exposed credentials"
-"./src/main/resources/application-uat.properties","5","# TODO"," Plaintext Password in configuration"
-"./src/main/resources/application-uat.properties","14","# TODO"," Base64 encoded password"
-"./src/main/resources/application-uat.properties","18","# TODO"," SSL Keystore exposed credentials"
-"./src/main/resources/application.properties","4","# TODO"," Plaintext Password in configuration"
-"./src/main/resources/application.properties","14","# TODO"," Base64 encoded password"
-"./src/main/resources/application.properties","17","# TODO"," SSL Keystore exposed credentials"
+Path, Line, TODO, Comment
+./src/main/java/com/pasodoff/hcp/badapple/Application.java,54,// TODO, HCP Comment within security framework constructor arguements
+./src/main/java/com/pasodoff/hcp/badapple/Application.java,56,// TODO, Hard coded admin username and password
+./src/main/java/com/pasodoff/hcp/badapple/model/User.java,13,// TODO, Not Finalizing Class
+./src/main/java/com/pasodoff/hcp/badapple/model/User.java,20,// TODO, Not Restricting Access to variables
+./src/main/java/com/pasodoff/hcp/badapple/model/User.java,23,// TODO, Password in comments
+./src/main/java/com/pasodoff/hcp/badapple/model/User.java,43,// TODO, Variable assignment of static default password
+./src/main/java/com/pasodoff/hcp/badapple/model/User.java,49,// TODO, Hard coded default password
+./src/main/java/com/pasodoff/hcp/badapple/model/User.java,51,// TODO, Password left in comment
+./src/main/java/com/pasodoff/hcp/badapple/resource/NslookupResource.java,29,// TODO, Insecure cookie HttpOnly flag not set
+./src/main/java/com/pasodoff/hcp/badapple/resource/UserResource.java,24,//TODO, XSS circumvent Same Origin Policy
+./src/main/java/com/pasodoff/hcp/badapple/service/CmdService.java,24,//TODO, Unsanitized commandline input
+./src/main/java/com/pasodoff/hcp/badapple/util/CORSResponseFilter.java,18,// TODO, XSS circumvent Same Origin Policy
+./src/main/java/com/pasodoff/hcp/badapple/util/Encryption.java,15,// TODO, Hard coded encryption key
+./src/main/java/com/pasodoff/hcp/badapple/util/Encryption.java,17,// TODO, Hard coded initialization vector
+./src/main/resources/application-local.properties,13,# TODO, SSL Keystore exposed credentials
+./src/main/resources/application-prod.properties,5,# TODO, Plaintext Password in configuration
+./src/main/resources/application-prod.properties,15,# TODO, Base64 encoded password
+./src/main/resources/application-prod.properties,18,# TODO, SSL Keystore exposed credentials
+./src/main/resources/application-uat.properties,5,# TODO, Plaintext Password in configuration
+./src/main/resources/application-uat.properties,14,# TODO, Base64 encoded password
+./src/main/resources/application-uat.properties,18,# TODO, SSL Keystore exposed credentials
+./src/main/resources/application.properties,4,# TODO, Plaintext Password in configuration
+./src/main/resources/application.properties,14,# TODO, Base64 encoded password
+./src/main/resources/application.properties,17,# TODO, SSL Keystore exposed credentials
+./src/main/resources/com/pasodoff/hcp/badapple/mapper/UserMapper.xml,23,<!-- TODO, SQL injection vulnerability -->
+./src/main/resources/import.sql,4,-- TODO, Hard coded user creation in SQL script

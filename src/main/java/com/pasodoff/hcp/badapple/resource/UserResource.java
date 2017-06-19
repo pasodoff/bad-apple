@@ -21,6 +21,8 @@ public class UserResource {
         this.userDao = userDao;
     }
 
+    //  TODO: XSS circumvent Same Origin Policy
+    @CrossOrigin(origins = "*")
     @RequestMapping("/user")
     public List<User> readUsers() {
         return userDao.selectAllUsers();

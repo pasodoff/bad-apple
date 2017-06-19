@@ -34,6 +34,11 @@ public class UserDao {
 
     public User insertUser(User user) {
         this.sqlSession.insert("insertUser", user);
-        return this.sqlSession.selectOne("selectUserByUsername", user.getUsername());
+        return selectUserByUsername(user.getUsername());
+    }
+
+    public User updateUser(User user) {
+        this.sqlSession.update("updateUser", user);
+        return selectUserByUsername(user.getUsername());
     }
 }

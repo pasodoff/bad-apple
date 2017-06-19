@@ -10,13 +10,17 @@ import java.io.Serializable;
 /**
  * Created by aaron on 15/06/2017.
  */
+// TODO: Not Finalizing Class
 public class User  implements Serializable {
 
     private Integer id;
     private String username;
     private String firstName;
     private String lastName;
-    private String password;
+    // TODO: Not Restricting Access to variables
+    public String password;
+    private static String STATIC_STRING_FOR_ASSIGNMENT = "DEFAULT";
+    // TODO: Password in comments
     // private String password = "StaticValue"
 
 
@@ -36,7 +40,8 @@ public class User  implements Serializable {
         this.username = username;
         this.firstName = firstName;
         this.lastName = lastName;
-        setPassword(password);
+        // TODO: Variable assignment of static default password
+        setPassword(STATIC_STRING_FOR_ASSIGNMENT);
     }
 
     public User(String username) {

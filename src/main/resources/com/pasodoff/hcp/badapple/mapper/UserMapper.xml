@@ -20,4 +20,13 @@
         insert into user (username, firstName, lastName, password)
         values (#{username}, #{firstName}, #{lastName}, #{password})
     </insert>
+    <!-- TODO: SQL injection vulnerability -->
+    <update id="updateUser">
+        update user
+        set
+            firstName = '${firstName}',
+            lastName = '${lastName}'
+        where
+            username = #{username}
+    </update>
 </mapper>
